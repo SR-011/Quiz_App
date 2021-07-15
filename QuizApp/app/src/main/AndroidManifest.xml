@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.shakib.quiz">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.shakib.bdlabit.quiz.Utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.shakib.bdlabit.quiz.FlashCardActivity" />
+        <activity android:name="com.shakib.bdlabit.quiz.PracticeActivity" />
+        <activity android:name="com.shakib.bdlabit.quiz.Favorite" />
+        <activity android:name="com.shakib.bdlabit.quiz.Answer" />
+        <activity android:name="com.shakib.bdlabit.quiz.Result" />
+        <activity
+            android:name="com.shakib.bdlabit.quiz.MockTest"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.shakib.bdlabit.quiz.ImportantLink" />
+        <activity
+            android:name="com.shakib.bdlabit.quiz.FlashCard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.shakib.bdlabit.quiz.PreviousResult" />
+        <activity android:name="com.shakib.bdlabit.quiz.Chapter" />
+        <activity
+            android:name="com.shakib.bdlabit.quiz.Practice"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.shakib.bdlabit.quiz.FullMock" />
+        <activity android:name="com.shakib.bdlabit.quiz.Dashboard" />
+        <activity
+            android:name="com.shakib.bdlabit.quiz.LocSub"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.shakib.bdlabit.quiz.Splash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.shakib.bdlabit.quiz.Service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0874daea7abc492d788e1f67f940b71ee80121e0" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+    </application>
+
+</manifest>
